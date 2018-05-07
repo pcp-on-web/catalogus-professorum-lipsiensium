@@ -9,3 +9,7 @@ echo "---"
 dba_pw="$( cat /import-data/pw | cut -d " " -f 4 )"
 sed s/store\.virtuoso\.password\ \ \ \ \=\ \"dba\"/store\.virtuoso\.password\ \ \ \ \=\ \"$dba_pw\"/g -i /var/www/html/config.ini
 
+echo "Configure Ontowiki"
+echo "---"
+echo 'properties[] = "http://catalogus-professorum.org/cpm/2/picture"' >> /var/www/html/extensions/imagelink/default.ini 
+
