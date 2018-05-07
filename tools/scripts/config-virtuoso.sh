@@ -12,9 +12,9 @@ echo "Import knowledgebases from /import-data/"
 echo "---"
 cmd="isql-v 1111 dba $dba_pw"
 
-$cmd exec="sparql CREATE SILENT GRAPH <http://catalogus-professorum.org/lipsiensium/>;"
 cp /import-data/lipsiensium.ttl . 
-$cmd exec="ld_dir ('.', '*.ttl', NULL);"
-$cmd exec="rdf_loader_run();"
+cp /import-data/import.sql . 
+$cmd import.sql
 rm lipsiensium.ttl 
+rm import.sql
 
