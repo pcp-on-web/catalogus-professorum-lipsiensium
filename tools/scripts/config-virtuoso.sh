@@ -12,9 +12,9 @@ echo "Import knowledgebases from /import-data/"
 echo "---"
 cmd="isql-v 1111 dba $dba_pw"
 
-cp /import-data/lipsiensium.ttl . 
+cp /import-data/*.ttl . 
 cp /import-data/import.sql . 
 $cmd import.sql
-rm lipsiensium.ttl 
+rm *.ttl 
 rm import.sql
 
