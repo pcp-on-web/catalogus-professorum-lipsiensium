@@ -6,14 +6,14 @@ echo "---"
 echo "Change Passwords"
 echo "---"
 isql-v 1111 dba dba /import-data/pw.sql
-dba_pw="$( cat /import-data/pw | cut -d " " -f 4 )"
+dba_pw="$( cat /import-data/pw.sql | cut -d " " -f 4 )"
 
 echo "Import knowledgebases from /import-data/"
 echo "---"
 cmd="isql-v 1111 dba $dba_pw"
 
-mkdir import-data
-cp /import-data/*.ttl ./import-data/ 
+mkdir tmp
+cp /import-data/*.ttl ./tmp/ 
 $cmd /import-data/import.sql
-rm -R ./import-data/
+rm -R ./tmp/
 
