@@ -5,15 +5,15 @@ echo "---"
 
 echo "Change Passwords"
 echo "---"
-isql-v 1111 dba dba /import-data/pw
+isql-v 1111 dba dba /import-data/pw.sql
 dba_pw="$( cat /import-data/pw | cut -d " " -f 4 )"
 
 echo "Import knowledgebases from /import-data/"
 echo "---"
 cmd="isql-v 1111 dba $dba_pw"
 
+mkdir import-data
 cp /import-data/*.ttl ./import-data/ 
-cp /import-data/import.sql ./import-data/ 
-$cmd import.sql
+$cmd /import-data/import.sql
 rm -R ./import-data/
 
