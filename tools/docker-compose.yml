@@ -5,7 +5,7 @@ virtuoso:
     SPARQL_UPDATE: "true"
   volumes:
     - ./data/virtuoso:/data
-    - ../../import-data:/import-data
+    - ../../../import-data:/import-data
     - ./scripts:/scripts
     - /usr/local/virtuoso-opensource/lib
 
