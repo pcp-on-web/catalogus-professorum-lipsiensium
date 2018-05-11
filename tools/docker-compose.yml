@@ -16,6 +16,8 @@ phpserver:
     - virtuoso
   links:
     - virtuoso
+  volumes:
+    - ../customize:/customize
 
 nginx:
   image: aksw/nginx-ontowiki
