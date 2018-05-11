@@ -32,7 +32,6 @@ nginx:
     - 8580:80
 
 ontowiki:
-  restart: always
   image: aksw/ontowiki
   links:
     - virtuoso
