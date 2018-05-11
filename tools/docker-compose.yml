@@ -17,7 +17,7 @@ phpserver:
   links:
     - virtuoso
   volumes:
-    - ./data/ontowiki:/var/www/html
+    - ./data/ontowiki:/var/www
     - ../customize:/customize
 
 nginx:
