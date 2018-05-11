@@ -1,4 +1,5 @@
 virtuoso:
+  restart: always
   image: tenforce/virtuoso:1.1.0-virtuoso7.2.4
   environment:
     DBA_PASSWORD: dba
@@ -10,6 +11,7 @@ virtuoso:
     - /usr/local/virtuoso-opensource/lib
 
 phpserver:
+  restart: always
   image: aksw/php-5.6-fpm-odbc-virtuoso
   volumes_from:
     - ontowiki
@@ -21,6 +23,7 @@ phpserver:
     - ../customize:/customize
 
 nginx:
+  restart: always
   image: aksw/nginx-ontowiki
   volumes_from:
     - ontowiki
@@ -30,6 +33,7 @@ nginx:
     - 8580:80
 
 ontowiki:
+  restart: always
   image: aksw/ontowiki
   links:
     - virtuoso
