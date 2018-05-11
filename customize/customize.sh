@@ -3,7 +3,7 @@
 # copy Theme
 cp -R /customize/theme/cpl /var/www/html/extensions/themes/
 ln -s /var/www/html/extensions/themes/silverblue/sandbox /var/www/html/extensions/themes/cpl/sandbox
-ln -s /var/www/extensions/htm/themes/silverblue/scripts /var/www/html/extensions/themes/cpl/scripts
+ln -s /var/www/html/extensions/themes/silverblue/scripts /var/www/html/extensions/themes/cpl/scripts
 
 echo 'themes.default = "cpl"' >> /var/www/html/config.ini
 
