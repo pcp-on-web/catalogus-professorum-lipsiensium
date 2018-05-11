@@ -20,6 +20,7 @@ docker exec -it tools_phpserver_1 /bin/bash
 ```
 /scripts/config-phpserver.sh
 /customize/customize.sh
+exit
 ```
 login as dba
 
