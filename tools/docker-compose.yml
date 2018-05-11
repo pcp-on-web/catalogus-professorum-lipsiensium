@@ -26,6 +26,8 @@ nginx:
   image: aksw/nginx-ontowiki
   volumes_from:
     - ontowiki
+  volumes:
+    - ./data/ontowiki:/var/www
   links:
     - phpserver
   ports:
@@ -35,5 +37,4 @@ ontowiki:
   image: aksw/ontowiki
   links:
     - virtuoso
-  volumes:
-    - ./data/ontowiki:/var/www
+ 
