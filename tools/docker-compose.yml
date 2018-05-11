@@ -36,4 +36,5 @@ ontowiki:
   image: aksw/ontowiki
   links:
     - virtuoso
+  volumes:
     - ./data/ontowiki:/var/www
