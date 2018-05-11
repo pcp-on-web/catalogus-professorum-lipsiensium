@@ -20,14 +20,14 @@ phpserver:
     - virtuoso
   volumes:
     - ../customize:/customize
+    - ./data/ontowiki:/ontowiki
+
 
 nginx:
   restart: always
   image: aksw/nginx-ontowiki
   volumes_from:
     - ontowiki
-  volumes:
-    - ./data/ontowiki:/var/www
   links:
     - phpserver
   ports:
