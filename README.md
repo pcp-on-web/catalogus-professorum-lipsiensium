@@ -45,13 +45,13 @@ rdf_loader_run();
 You can also use KBox:
 
 ```
-java -jar kbox-v0.0.1-alpha3-RC16.jar -sparql "select ?s {{?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://catalogus-professorum.org/cpd/Person>}" -kb "http://aditus.catalogus-professorum.org/lipsiensium"
+java -jar kbox-v0.0.1-alpha3-RC16.jar -sparql "select ?s {{?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://catalogus-professorum.org/cpd/Person>}" -kb "http://aditus.catalogus-professorum.org/lipsiensium" -install
 ```
 
 Or start an endpoint:
 
 ```
-java -jar kbox-v0.0.1-alpha3-RC16.jar -server -kb "http://aditus.catalogus-professorum.org/lipsiensium"
+java -jar kbox-v0.0.1-alpha3-RC16.jar -server -kb "http://aditus.catalogus-professorum.org/lipsiensium" -install
 Loading Model...
 Publishing service on http://localhost:8080/kbox/query
 Service up and running ;-) ...
